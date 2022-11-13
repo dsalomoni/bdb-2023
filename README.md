@@ -70,13 +70,13 @@ you should restart the Docker daemon. Open the "Docker Desktop" application from
 
 ### On Windows, after you install Docker Desktop you cannot run VirtualBox VMs anymore
 
-This is a Windows issue that does not always happen. If you do not have VirtualBox installed, or if VirtualBox and Docker both work on your system, skip this part. 
+This is a problem occurring only on Windows, where anyway it does not always happen. If you do not have VirtualBox installed, or if VirtualBox and Docker both work on your system, skip this part. 
 
 If you have this issue, there a couple of options. 
 
 1. if you use VirtualBox just to get a Ubuntu system, have a look at the <a href="https://github.com/dsalomoni/my-ubuntu">my ubuntu</a> repository, which explains how to use Docker to run and customize a full Ubuntu system, complete with a GUI. This is typically _much faster_ than a VirtualBox VM.
 
-2. if you do need to have VirtualBox running _and_ you experience that after having installed Docker Desktop you cannot run VirtualBox VMs anymore, first of all **update your VirtualBox software** to the latest available version. This is because in recent versions VirtualBox should have fixed their incompatibility with Docker.
+2. if you do need to have VirtualBox VMs _and_ you experience that after having installed Docker Desktop you cannot run VirtualBox VMs anymore, first of all **update your VirtualBox software** to the latest available version. This is because in recent versions VirtualBox should have fixed their incompatibility with Docker.
 
    If you still have the problem even after having upgraded VirtualBox to the latest version, there is unfortunately only a workaround that seems to work, and that is to enable **either** Docker Desktop **or** VirtualBox. You can have both installed on your system, but only one at a time can be enabled.
 
@@ -87,8 +87,8 @@ If you have this issue, there a couple of options.
 
    Now, in the windows that opens up:
 
-   - **if you want to use VirtualBox**, _deselect_ the items called "Virtual machine platform" and "Windows Hypervisor Platformn" and then click "OK". 
-   - **if you want to use Docker**, _select_ the items called "Virtual machine platform" and "Windows Hypervisor Platformn" and then click "OK". 
+   - **if you want to use VirtualBox**, _deselect_ the items called "Virtual machine platform" and "Windows Hypervisor Platform" and then click "OK". 
+   - **if you want to use Docker**, _select_ the items called "Virtual machine platform" and "Windows Hypervisor Platform" and then click "OK". 
 
    Those with an Italian version of Windows will see the two items mentioned above translated as "Piattaforma macchina virtuale" and "Piattaforma Windows Hypervisor".
 
