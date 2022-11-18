@@ -72,7 +72,7 @@ you should restart the Docker daemon. Open the "Docker Desktop" application from
 
 This is a problem occurring only on Windows, where anyway it does not always happen. If you do not have VirtualBox installed, or if VirtualBox and Docker both work on your system, skip this part. 
 
-If you have this issue, there a couple of options. 
+If you have this issue, there are a couple of options. 
 
 1. if you use VirtualBox just to get a Ubuntu system, have a look at the <a href="https://github.com/dsalomoni/my-ubuntu">my ubuntu</a> repository, which explains how to use Docker to run and customize a full Ubuntu system, complete with a GUI. This is typically _much faster_ than a VirtualBox VM.
 
