@@ -12,8 +12,8 @@ For more information on the course, see [here](https://www.unibo.it/it/didattica
 - [2. Create a docker network](#2-create-a-docker-network)
 - [3. Start the Jupyter notebook](#3-start-the-jupyter-notebook)
   - [3.1. Making a local directory visible to Jupyter](#31-making-a-local-directory-visible-to-jupyter)
-    - [3.1.1. On Windows 10/11:](#311-on-windows-1011)
-    - [3.1.2. On Linux/MacOS:](#312-on-linuxmacos)
+    - [3.1.1. On Windows 10/11](#311-on-windows-1011)
+    - [3.1.2. On Linux/MacOS](#312-on-linuxmacos)
 - [4. Start the redis server](#4-start-the-redis-server)
   - [4.1. Without persistence:](#41-without-persistence)
   - [4.2. With persistence:](#42-with-persistence)
@@ -47,9 +47,9 @@ docker run -d --rm --name my_jupyter --mount src=bdb_data,dst=/home/jovyan -p 12
 
 ### 3.1. Making a local directory visible to Jupyter
 
-If you want to make a directory on your system visible to Jupyter, modify the `docker run` command listed above as per the following instructions, which you should edit according to your needs: here a local directory called `bdb` will be mapper to the `work` directory on Jupyter.
+If you want to make a directory on your system visible to Jupyter, modify the `docker run` command listed above as per the following instructions, which you should edit according to your needs: here a local directory called `bdb` will be mapped to the `work` directory on Jupyter.
 
-#### 3.1.1. On Windows 10/11:
+#### 3.1.1. On Windows 10/11
 - Open the Windows PowerShell as Administrator.
 - Type the command `mkdir C:\bdb`
 - If a `my_jupyter` container is running (check with `docker ps`), stop it with `docker stop my_jupyter`.
@@ -58,7 +58,7 @@ If you want to make a directory on your system visible to Jupyter, modify the `d
 docker run -d --rm --name my_jupyter --mount src=bdb_data,dst=/home/jovyan -p 127.0.0.1:8888:8888 --network bdb-net -e JUPYTER_ENABLE_LAB=yes -e JUPYTER_TOKEN="bdb_password" --user root -e CHOWN_HOME=yes -e CHOWN_HOME_OPTS="-R" --mount src=C:\bdb,dst=/home/jovyan/work,type=bind jupyter/datascience-notebook
 ```
 
-#### 3.1.2. On Linux/MacOS:
+#### 3.1.2. On Linux/MacOS
 - Open a terminal window.
 - Type the command `mkdir $HOME/bdb`
 - If a `my_jupyter` container is running (check with `docker ps`), stop it with `docker stop my_jupyter`.
